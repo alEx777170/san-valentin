@@ -1,0 +1,204 @@
+/* ========================================= */
+/* CONFIGURACIÓN GENERAL */
+/* ========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Fondo romántico con gradiente */
+body{
+    height:100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(135deg, #ff4e88, #ff8fab, #ffc2d1);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+/* ========================================= */
+/* CONTENEDOR PRINCIPAL */
+/* ========================================= */
+
+.container{
+
+    text-align:center;
+
+    background: rgba(255,255,255,0.1);
+
+    padding:30px;
+
+    border-radius:20px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 0 30px rgba(255,255,255,0.3);
+
+    animation: aparecer 1.5s ease;
+}
+
+/* Animación de aparición */
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================= */
+/* TEXTOS */
+/* ========================================= */
+
+.titulo{
+
+    font-size:2rem;
+
+    color:white;
+
+    text-shadow:0 0 10px white;
+
+    margin-bottom:10px;
+}
+
+.subtitulo{
+
+    color:white;
+
+    margin-bottom:25px;
+
+    opacity:0.9;
+}
+
+/* ========================================= */
+/* BOTONES */
+/* ========================================= */
+
+.botones{
+
+    display:flex;
+
+    gap:20px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+}
+
+/* Estilo general */
+.btn{
+
+    padding:15px 25px;
+
+    font-size:1.2rem;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    box-shadow:0 0 15px rgba(0,0,0,0.3);
+}
+
+/* Botón SI */
+.si{
+
+    background:#ff2e63;
+
+    color:white;
+}
+
+.si:hover{
+
+    transform:scale(1.1);
+
+    box-shadow:0 0 25px #ff2e63;
+}
+
+/* Botón NO */
+.no{
+
+    background:#444;
+
+    color:white;
+
+    position:relative;
+}
+
+/* ========================================= */
+/* MENSAJE FINAL */
+/* ========================================= */
+
+.mensaje-final{
+
+    margin-top:25px;
+
+    color:white;
+
+    font-size:1.4rem;
+
+    animation: aparecer 1s ease;
+}
+
+.oculto{
+
+    display:none;
+}
+
+/* ========================================= */
+/* CORAZONES */
+/* ========================================= */
+
+.heart{
+
+    position:absolute;
+
+    color:red;
+
+    font-size:20px;
+
+    animation: flotar linear infinite;
+}
+
+/* Animación de corazones flotando */
+@keyframes flotar{
+
+    from{
+        transform: translateY(100vh);
+        opacity:1;
+    }
+
+    to{
+        transform: translateY(-10vh);
+        opacity:0;
+    }
+}
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media(max-width:600px){
+
+    .titulo{
+        font-size:1.5rem;
+    }
+
+    .btn{
+        font-size:1rem;
+        padding:12px 20px;
+    }
+
+}
